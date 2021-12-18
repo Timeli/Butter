@@ -27,6 +27,11 @@ public class ButterMelt : MonoBehaviour
         }
     }
 
+    private void Melt()
+    {
+
+    }
+
 
     private IEnumerator Paint(float duration)
     {
