@@ -8,10 +8,20 @@ public class ButterMelt : MonoBehaviour
 {
     [SerializeField] private ButterControl _butterControl;
     [SerializeField] private Material _oilMaterial;
+    [SerializeField] [Range(1, 30)] private int _maxStep;
 
     private Renderer _blockRenderer;
     private string _clean = "clean";
     private string _painted = "painted";
+    private float _butterHight = 2f;
+    private Vector3 _deltaH;
+
+
+    private void Start()
+    {
+
+        _deltaH = new Vector3(0, _butterHight / _maxStep, 0);
+    }
 
 
     private void PaintFloor()
@@ -22,14 +32,16 @@ public class ButterMelt : MonoBehaviour
             {
                 _blockRenderer = hitInfo.collider.GetComponent<Renderer>();
                 StartCoroutine(Paint(0.1f));
+                Melt();
                 hitInfo.collider.tag = _painted;
             }
         }
     }
 
+
     private void Melt()
     {
-
+        transform.localScale -= _deltaH;
     }
 
 
