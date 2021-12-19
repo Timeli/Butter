@@ -6,59 +6,48 @@ using UnityEngine;
 
 public class ButterMelt : MonoBehaviour
 {
-    [SerializeField] private ButterControl _butterControl;
+    [SerializeField] private Health _health;
     [SerializeField] private Material _oilMaterial;
-    [SerializeField] [Range(1, 30)] private int _maxStep;
 
-    private Renderer _blockRenderer;
     private string _clean = "clean";
     private string _painted = "painted";
     private float _butterHight = 2f;
+    private int _maxStep;
     private Vector3 _deltaH;
 
 
     private void Start()
     {
-
+        _maxStep = _health.HealtCount;
         _deltaH = new Vector3(0, _butterHight / _maxStep, 0);
     }
 
 
-    private void PaintFloor()
+    private void Melt(int healthByStep, Renderer kindOfGround)
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1))
-        {
-            if (hitInfo.collider.tag.Equals(_clean))
-            {
-                _blockRenderer = hitInfo.collider.GetComponent<Renderer>();
-                StartCoroutine(Paint(0.1f));
-                Melt();
-                hitInfo.collider.tag = _painted;
-            }
-        }
+        transform.localScale -= _deltaH * healthByStep;
+
+        if (kindOfGround.tag.Equals(_clean))
+            StartCoroutine(PaintFloor(0.1f, kindOfGround));
     }
 
 
-    private void Melt()
-    {
-        transform.localScale -= _deltaH;
-    }
-
-
-    private IEnumerator Paint(float duration)
+    private IEnumerator PaintFloor(float duration, Renderer ground)
     {
         yield return new WaitForSeconds(duration);
-        _blockRenderer.material = _oilMaterial;
+        ground.material = _oilMaterial;
+        ground.tag = _painted;
     }
 
 
     private void OnEnable()
     {
-        _butterControl.Onender += PaintFloor;
+        _health.HealtByStepNotify += Melt;
     }
+
 
     private void OnDisable()
     {
-        _butterControl.Onender -= PaintFloor;
+        _health.HealtByStepNotify -= Melt;
     }
 }

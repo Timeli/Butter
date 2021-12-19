@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 
-public delegate void Sender();
+public delegate void StepSender();
 public class ButterControl : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -10,7 +10,8 @@ public class ButterControl : MonoBehaviour
     private GeneralControl _control;
     private bool _isMove;
 
-    public event Sender Onender;
+    public event StepSender Notify;
+
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class ButterControl : MonoBehaviour
         var pointer = _control.Butter.Move.ReadValue<Vector2>();
         MoveButter(pointer);
     }
-
+    
 
     private void MoveButter(Vector3 route)
     {
@@ -41,9 +42,10 @@ public class ButterControl : MonoBehaviour
             else if (route == Vector3.down)   //вниз влево
                 direction = Vector3.right;
 
-            StartCoroutine(Move(0.01f, direction));
+            StartCoroutine(Move(0.01f, direction)); 
         }
     }
+
 
     private IEnumerator Move(float dur, Vector3 vector)
     {
@@ -56,18 +58,20 @@ public class ButterControl : MonoBehaviour
                                                      _speed * Time.fixedDeltaTime);
             yield return duration;
         }
-        Onender?.Invoke();
+        Notify?.Invoke();
         _isMove = false;
     }
 
 
     private void OnEnable()
     {
-        _control.Butter.Enable();
+        _control.Enable();
     }
+
 
     private void OnDisable()
     {
-        _control.Butter.Disable();
+        _control.Disable();
     }
 }
+
