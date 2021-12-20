@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
                 direction = Vector3.right;
 
             StartCoroutine(Move(_duration, direction));
-
         }
     }
 

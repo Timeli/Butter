@@ -16,6 +16,7 @@ public class GroundChecker : MonoBehaviour
 
     public event Action<int> GroundNotify;
 
+
     private void Awake()
     {
         _playerConroller = GetComponent<PlayerController>();
@@ -58,7 +59,7 @@ public class GroundChecker : MonoBehaviour
 
 public enum KindOfGround
 {
-    Green = 1,
-    Orange = 2,
-    Red = 3
+    Green = -1,
+    Orange = -2,
+    Red = -3
 }

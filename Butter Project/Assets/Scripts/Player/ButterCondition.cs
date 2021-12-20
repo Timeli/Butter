@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,17 +7,17 @@ using UnityEngine;
 public class ButterCondition : MonoBehaviour
 {
     private GroundChecker _groundChecker;
+    public event Action<int> HealthChanged;
 
     private void Awake()
     {
         _groundChecker = GetComponent<GroundChecker>();
     }
 
-    private void ChangeHealth()
+    public void ChangeHealth(int amount)
     {
-
+        HealthChanged?.Invoke(amount);
     }
-
 
     private void OnEnable()
     {

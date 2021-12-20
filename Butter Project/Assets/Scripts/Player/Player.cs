@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(ButterCondition))]
+
 public class Player : MonoBehaviour
 {
     private ButterCondition _butterCondition;
@@ -17,8 +17,18 @@ public class Player : MonoBehaviour
         _butterCondition = GetComponent<ButterCondition>();
     }
 
-    private void ChangeHealth(int count)
+    private void ChangeHealth(int amount)
     {
-        _playerHealth += count;
+        _playerHealth += amount;
+    }
+
+    private void OnEnable()
+    {
+        _butterCondition.HealthChanged += ChangeHealth;
+    }
+
+    private void OnDisable()
+    {
+        _butterCondition.HealthChanged -= ChangeHealth;
     }
 }
