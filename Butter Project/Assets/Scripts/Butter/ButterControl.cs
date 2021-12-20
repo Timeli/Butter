@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,9 +9,8 @@ public class ButterControl : MonoBehaviour
     [SerializeField] private float _speed;
 
     private GeneralControl _control;
-    private bool _isMove;
-
-    public event StepSender Notify;
+    public event Action StepNotify;
+    [SerializeField]private bool _isMove;
 
 
     private void Awake()
@@ -18,17 +18,15 @@ public class ButterControl : MonoBehaviour
         _control = new GeneralControl();
     }
 
-
     private void FixedUpdate()
     {
         var pointer = _control.Butter.Move.ReadValue<Vector2>();
         MoveButter(pointer);
     }
     
-
     private void MoveButter(Vector3 route)
     {
-        if (route != Vector3.zero && _isMove == false)
+        if (_isMove == false && route != Vector3.zero)
         {
             _isMove = true;
             Vector3 direction = Vector3.zero;
@@ -42,14 +40,14 @@ public class ButterControl : MonoBehaviour
             else if (route == Vector3.down)   //вниз влево
                 direction = Vector3.right;
 
-            StartCoroutine(Move(0.01f, direction)); 
+            StartCoroutine(Move(0.01f, direction));
+
         }
     }
 
-
-    private IEnumerator Move(float dur, Vector3 vector)
+    private IEnumerator Move(float dur, Vector3 direction)
     {
-        var point = transform.position + vector;
+        var point = transform.position + direction;
         var duration = new WaitForSeconds(dur);
 
         while (transform.position != point)
@@ -58,16 +56,15 @@ public class ButterControl : MonoBehaviour
                                                      _speed * Time.fixedDeltaTime);
             yield return duration;
         }
-        Notify?.Invoke();
+        StepNotify?.Invoke();
         _isMove = false;
-    }
 
+    }
 
     private void OnEnable()
     {
         _control.Enable();
     }
-
 
     private void OnDisable()
     {
