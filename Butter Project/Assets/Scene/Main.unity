@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 10976971}
   - component: {fileID: 10976970}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 39402586}
   - component: {fileID: 39402585}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 42248216}
   - component: {fileID: 42248215}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 50884215}
   - component: {fileID: 50884214}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,10 +517,9 @@ GameObject:
   - component: {fileID: 89215363}
   - component: {fileID: 89215369}
   - component: {fileID: 89215367}
-  - component: {fileID: 89215370}
   - component: {fileID: 89215368}
   m_Layer: 0
-  m_Name: Butter
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -611,7 +610,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 89215362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0666342f2b9f34d4e8fd59652aba94ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 76d54dc63c421da44805443d098480d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
@@ -624,11 +623,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 89215362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 753698557fa769e40b48bad9ca8f7656, type: 3}
+  m_Script: {fileID: 11500000, guid: 2809dca710bb82d419dbdede56407b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _butterControl: {fileID: 89215367}
-  _health: 30
 --- !u!54 &89215369
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -645,20 +642,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &89215370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89215362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70d13353853cd84e8daf9d39febe660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: {fileID: 89215368}
-  _oilMaterial: {fileID: 2100000, guid: c97161fe2830a7e4fafaff7b75a3d138, type: 2}
 --- !u!1 &106562307
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +655,7 @@ GameObject:
   - component: {fileID: 106562310}
   - component: {fileID: 106562309}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,7 +750,7 @@ GameObject:
   - component: {fileID: 107478657}
   - component: {fileID: 107478656}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -867,7 +850,7 @@ GameObject:
   - component: {fileID: 124964913}
   - component: {fileID: 124964912}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,7 +945,7 @@ GameObject:
   - component: {fileID: 146450486}
   - component: {fileID: 146450485}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1057,7 +1040,7 @@ GameObject:
   - component: {fileID: 162970918}
   - component: {fileID: 162970917}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1152,7 +1135,7 @@ GameObject:
   - component: {fileID: 200106152}
   - component: {fileID: 200106151}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1247,7 +1230,7 @@ GameObject:
   - component: {fileID: 202022000}
   - component: {fileID: 202021999}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1342,7 +1325,7 @@ GameObject:
   - component: {fileID: 229278492}
   - component: {fileID: 229278491}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1437,7 +1420,7 @@ GameObject:
   - component: {fileID: 239627157}
   - component: {fileID: 239627156}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1532,7 +1515,7 @@ GameObject:
   - component: {fileID: 241218269}
   - component: {fileID: 241218268}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1632,7 +1615,7 @@ GameObject:
   - component: {fileID: 244862372}
   - component: {fileID: 244862371}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1727,7 +1710,7 @@ GameObject:
   - component: {fileID: 246858923}
   - component: {fileID: 246858922}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1917,7 +1900,7 @@ GameObject:
   - component: {fileID: 305184235}
   - component: {fileID: 305184234}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,7 +1995,7 @@ GameObject:
   - component: {fileID: 305219091}
   - component: {fileID: 305219090}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2107,7 +2090,7 @@ GameObject:
   - component: {fileID: 316421726}
   - component: {fileID: 316421725}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2202,7 +2185,7 @@ GameObject:
   - component: {fileID: 327917382}
   - component: {fileID: 327917381}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2297,7 +2280,7 @@ GameObject:
   - component: {fileID: 331585653}
   - component: {fileID: 331585652}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2392,7 +2375,7 @@ GameObject:
   - component: {fileID: 367610459}
   - component: {fileID: 367610458}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2487,7 +2470,7 @@ GameObject:
   - component: {fileID: 407952764}
   - component: {fileID: 407952763}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2582,7 +2565,7 @@ GameObject:
   - component: {fileID: 447868832}
   - component: {fileID: 447868831}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2677,7 +2660,7 @@ GameObject:
   - component: {fileID: 452584017}
   - component: {fileID: 452584016}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2772,7 +2755,7 @@ GameObject:
   - component: {fileID: 463292089}
   - component: {fileID: 463292088}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2867,7 +2850,7 @@ GameObject:
   - component: {fileID: 487164183}
   - component: {fileID: 487164182}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2962,7 +2945,7 @@ GameObject:
   - component: {fileID: 490552443}
   - component: {fileID: 490552442}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3057,7 +3040,7 @@ GameObject:
   - component: {fileID: 518873373}
   - component: {fileID: 518873372}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3152,7 +3135,7 @@ GameObject:
   - component: {fileID: 524680007}
   - component: {fileID: 524680006}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3247,7 +3230,7 @@ GameObject:
   - component: {fileID: 554096698}
   - component: {fileID: 554096697}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3342,7 +3325,7 @@ GameObject:
   - component: {fileID: 572369952}
   - component: {fileID: 572369951}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3437,7 +3420,7 @@ GameObject:
   - component: {fileID: 587321945}
   - component: {fileID: 587321944}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3532,7 +3515,7 @@ GameObject:
   - component: {fileID: 587547510}
   - component: {fileID: 587547509}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3627,7 +3610,7 @@ GameObject:
   - component: {fileID: 600365672}
   - component: {fileID: 600365671}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3722,7 +3705,7 @@ GameObject:
   - component: {fileID: 618691522}
   - component: {fileID: 618691521}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3817,7 +3800,7 @@ GameObject:
   - component: {fileID: 652988818}
   - component: {fileID: 652988817}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3912,7 +3895,7 @@ GameObject:
   - component: {fileID: 678406405}
   - component: {fileID: 678406404}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4006,7 +3989,6 @@ GameObject:
   - component: {fileID: 693229714}
   - component: {fileID: 693229713}
   - component: {fileID: 693229712}
-  - component: {fileID: 693229715}
   m_Layer: 0
   m_Name: ButtonInner
   m_TagString: Untagged
@@ -4090,114 +4072,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693229710}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &693229715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693229710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb33afea91b72f46adb62573a101632, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bridgeController: {fileID: 1225694341}
---- !u!1 &705064029
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 705064033}
-  - component: {fileID: 705064032}
-  - component: {fileID: 705064031}
-  - component: {fileID: 705064030}
-  m_Layer: 0
-  m_Name: Painted Floor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &705064030
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705064029}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &705064031
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705064029}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: c97161fe2830a7e4fafaff7b75a3d138, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &705064032
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705064029}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &705064033
+--- !u!4 &705064033 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+  m_PrefabInstance: {fileID: 8619279186419824873}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705064029}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &717778850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,7 +4234,7 @@ GameObject:
   - component: {fileID: 718522836}
   - component: {fileID: 718522835}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4450,7 +4329,7 @@ GameObject:
   - component: {fileID: 722596868}
   - component: {fileID: 722596867}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4545,7 +4424,7 @@ GameObject:
   - component: {fileID: 738819030}
   - component: {fileID: 738819029}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4640,7 +4519,7 @@ GameObject:
   - component: {fileID: 743032725}
   - component: {fileID: 743032724}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4735,7 +4614,7 @@ GameObject:
   - component: {fileID: 744300770}
   - component: {fileID: 744300769}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4830,7 +4709,7 @@ GameObject:
   - component: {fileID: 747719709}
   - component: {fileID: 747719708}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4930,7 +4809,7 @@ GameObject:
   - component: {fileID: 811202220}
   - component: {fileID: 811202219}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5025,7 +4904,7 @@ GameObject:
   - component: {fileID: 822136723}
   - component: {fileID: 822136722}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5168,7 +5047,7 @@ GameObject:
   - component: {fileID: 855839072}
   - component: {fileID: 855839071}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5263,7 +5142,7 @@ GameObject:
   - component: {fileID: 860817356}
   - component: {fileID: 860817355}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5358,7 +5237,7 @@ GameObject:
   - component: {fileID: 867553294}
   - component: {fileID: 867553293}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5453,7 +5332,7 @@ GameObject:
   - component: {fileID: 1006860786}
   - component: {fileID: 1006860785}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5648,7 +5527,7 @@ GameObject:
   - component: {fileID: 1056346375}
   - component: {fileID: 1056346374}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5743,7 +5622,7 @@ GameObject:
   - component: {fileID: 1056555877}
   - component: {fileID: 1056555876}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5838,7 +5717,7 @@ GameObject:
   - component: {fileID: 1065914210}
   - component: {fileID: 1065914209}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5933,7 +5812,7 @@ GameObject:
   - component: {fileID: 1067317149}
   - component: {fileID: 1067317148}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6028,7 +5907,7 @@ GameObject:
   - component: {fileID: 1080581046}
   - component: {fileID: 1080581045}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6123,7 +6002,7 @@ GameObject:
   - component: {fileID: 1088339369}
   - component: {fileID: 1088339368}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6218,7 +6097,7 @@ GameObject:
   - component: {fileID: 1094236699}
   - component: {fileID: 1094236698}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6313,7 +6192,7 @@ GameObject:
   - component: {fileID: 1136955118}
   - component: {fileID: 1136955117}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6408,7 +6287,7 @@ GameObject:
   - component: {fileID: 1178827696}
   - component: {fileID: 1178827695}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6503,7 +6382,6 @@ GameObject:
   - component: {fileID: 1182902436}
   - component: {fileID: 1182902435}
   - component: {fileID: 1182902439}
-  - component: {fileID: 1182902440}
   m_Layer: 0
   m_Name: Star (1)
   m_TagString: Untagged
@@ -6585,7 +6463,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1182902439
 Animator:
@@ -6606,18 +6484,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1182902440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182902434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e593ec0e0b25d242adc5ec8de3c1363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1225694339
 GameObject:
   m_ObjectHideFlags: 0
@@ -6649,8 +6515,9 @@ Transform:
   - {fileID: 1883342735}
   - {fileID: 1026566763}
   - {fileID: 267897485}
+  - {fileID: 1473185926}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1225694341
 MonoBehaviour:
@@ -6679,7 +6546,7 @@ GameObject:
   - component: {fileID: 1244216569}
   - component: {fileID: 1244216568}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6774,7 +6641,7 @@ GameObject:
   - component: {fileID: 1277136709}
   - component: {fileID: 1277136708}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6869,7 +6736,7 @@ GameObject:
   - component: {fileID: 1296927641}
   - component: {fileID: 1296927640}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6964,7 +6831,7 @@ GameObject:
   - component: {fileID: 1309426318}
   - component: {fileID: 1309426317}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7059,7 +6926,7 @@ GameObject:
   - component: {fileID: 1323490354}
   - component: {fileID: 1323490353}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7154,7 +7021,7 @@ GameObject:
   - component: {fileID: 1348476977}
   - component: {fileID: 1348476976}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7330,7 +7197,7 @@ Transform:
   m_Children:
   - {fileID: 693229711}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374670634
 GameObject:
@@ -7345,7 +7212,7 @@ GameObject:
   - component: {fileID: 1374670637}
   - component: {fileID: 1374670636}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7440,7 +7307,7 @@ GameObject:
   - component: {fileID: 1389982392}
   - component: {fileID: 1389982391}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7535,7 +7402,7 @@ GameObject:
   - component: {fileID: 1392025550}
   - component: {fileID: 1392025549}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7630,7 +7497,7 @@ GameObject:
   - component: {fileID: 1393718715}
   - component: {fileID: 1393718714}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7725,7 +7592,7 @@ GameObject:
   - component: {fileID: 1413754741}
   - component: {fileID: 1413754740}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7820,7 +7687,7 @@ GameObject:
   - component: {fileID: 1425879743}
   - component: {fileID: 1425879742}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7915,7 +7782,7 @@ GameObject:
   - component: {fileID: 1428643429}
   - component: {fileID: 1428643428}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8090,7 +7957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1440632208
 GameObject:
@@ -8105,7 +7972,7 @@ GameObject:
   - component: {fileID: 1440632211}
   - component: {fileID: 1440632210}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8200,7 +8067,7 @@ GameObject:
   - component: {fileID: 1460688971}
   - component: {fileID: 1460688970}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8295,7 +8162,7 @@ GameObject:
   - component: {fileID: 1461252320}
   - component: {fileID: 1461252319}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8390,7 +8257,7 @@ GameObject:
   - component: {fileID: 1467695420}
   - component: {fileID: 1467695419}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8485,7 +8352,7 @@ GameObject:
   - component: {fileID: 1471145680}
   - component: {fileID: 1471145679}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8591,11 +8458,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473185925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 4}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1225694340}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1476715821
 GameObject:
@@ -8610,7 +8477,7 @@ GameObject:
   - component: {fileID: 1476715824}
   - component: {fileID: 1476715823}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8705,7 +8572,7 @@ GameObject:
   - component: {fileID: 1489272147}
   - component: {fileID: 1489272146}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8800,7 +8667,7 @@ GameObject:
   - component: {fileID: 1511204449}
   - component: {fileID: 1511204448}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8895,7 +8762,7 @@ GameObject:
   - component: {fileID: 1537605295}
   - component: {fileID: 1537605294}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8990,7 +8857,7 @@ GameObject:
   - component: {fileID: 1540817173}
   - component: {fileID: 1540817172}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9085,7 +8952,7 @@ GameObject:
   - component: {fileID: 1549271870}
   - component: {fileID: 1549271869}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9180,7 +9047,7 @@ GameObject:
   - component: {fileID: 1553906278}
   - component: {fileID: 1553906277}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9275,7 +9142,7 @@ GameObject:
   - component: {fileID: 1602378825}
   - component: {fileID: 1602378824}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9370,7 +9237,7 @@ GameObject:
   - component: {fileID: 1626876979}
   - component: {fileID: 1626876978}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9465,7 +9332,7 @@ GameObject:
   - component: {fileID: 1630701134}
   - component: {fileID: 1630701133}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9560,7 +9427,7 @@ GameObject:
   - component: {fileID: 1673106735}
   - component: {fileID: 1673106734}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9655,7 +9522,7 @@ GameObject:
   - component: {fileID: 1717976161}
   - component: {fileID: 1717976160}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9750,7 +9617,7 @@ GameObject:
   - component: {fileID: 1718914084}
   - component: {fileID: 1718914083}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9845,7 +9712,7 @@ GameObject:
   - component: {fileID: 1724186646}
   - component: {fileID: 1724186645}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10077,7 +9944,7 @@ GameObject:
   - component: {fileID: 1745693399}
   - component: {fileID: 1745693398}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10172,7 +10039,7 @@ GameObject:
   - component: {fileID: 1748194723}
   - component: {fileID: 1748194722}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10267,7 +10134,7 @@ GameObject:
   - component: {fileID: 1751351314}
   - component: {fileID: 1751351313}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10362,7 +10229,7 @@ GameObject:
   - component: {fileID: 1787843693}
   - component: {fileID: 1787843692}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10457,7 +10324,7 @@ GameObject:
   - component: {fileID: 1790756411}
   - component: {fileID: 1790756410}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10647,7 +10514,7 @@ GameObject:
   - component: {fileID: 1928291465}
   - component: {fileID: 1928291464}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10742,7 +10609,7 @@ GameObject:
   - component: {fileID: 1930689338}
   - component: {fileID: 1930689337}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10837,7 +10704,7 @@ GameObject:
   - component: {fileID: 1940047367}
   - component: {fileID: 1940047366}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10937,7 +10804,7 @@ GameObject:
   - component: {fileID: 1948929072}
   - component: {fileID: 1948929071}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11032,7 +10899,7 @@ GameObject:
   - component: {fileID: 1963776995}
   - component: {fileID: 1963776994}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11146,8 +11013,9 @@ Transform:
   - {fileID: 243913811}
   - {fileID: 807344128}
   - {fileID: 1042699979}
+  - {fileID: 705064033}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988420567
 GameObject:
@@ -11162,7 +11030,7 @@ GameObject:
   - component: {fileID: 1988420570}
   - component: {fileID: 1988420569}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11257,7 +11125,7 @@ GameObject:
   - component: {fileID: 1997735566}
   - component: {fileID: 1997735565}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11352,7 +11220,7 @@ GameObject:
   - component: {fileID: 2069429658}
   - component: {fileID: 2069429657}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11447,7 +11315,7 @@ GameObject:
   - component: {fileID: 2069588677}
   - component: {fileID: 2069588676}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11542,7 +11410,7 @@ GameObject:
   - component: {fileID: 2100297094}
   - component: {fileID: 2100297093}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11637,7 +11505,7 @@ GameObject:
   - component: {fileID: 2107662894}
   - component: {fileID: 2107662893}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GreenGround
   m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11990,6 +11858,306 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1987941796}
     m_Modifications:
+    - target: {fileID: 2665711994613952889, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994620046085, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994702395463, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994712799990, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994754958917, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994762136199, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994787469061, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994822239030, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994837585379, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994839503018, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994841356646, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994870749860, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994899061136, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994904949921, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711994957402400, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995024052029, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995025816822, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995040760074, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995045381273, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995052425138, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995057801212, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995081926170, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995093492864, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995093539558, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995129343192, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995141962335, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995160822948, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995164836832, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995176616418, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995196795357, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995222594460, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995225639147, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995230887206, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995240923918, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995241053262, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995249275242, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995302497601, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995302942977, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995307196304, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995330776841, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995413345016, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995425282765, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995436238945, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995439962332, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995441560239, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995496176297, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995503584089, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995527609659, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995538276369, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995632706198, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995635786923, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995669472065, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995695766072, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995708019847, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995713059835, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995717959049, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995720733552, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995721110549, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995765671517, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995789055982, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995790463395, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995814751904, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995818132255, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995835410836, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995840560495, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995866501869, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995870566946, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995919324108, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995928151214, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995938612814, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711995942669122, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996003395243, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996034147992, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996052677926, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996059471489, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 2665711996064153778, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
       propertyPath: m_Name
       value: Blocks (1)
@@ -12037,6 +12205,174 @@ PrefabInstance:
     - target: {fileID: 2665711996064153779, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996084872496, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996101290321, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996137773875, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996142619735, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996142705073, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996151903028, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996166468956, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996172186751, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996205366286, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996242168719, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996245733751, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996287979488, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996296478613, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996298826644, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996323617740, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996325364066, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996339535062, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996344315808, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996356910835, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996370436673, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996391472177, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996405315658, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996427091173, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996436664134, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996485442859, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996518050489, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996541527364, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996549416538, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996556767499, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996565845011, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996572804246, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996593977618, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996632074639, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996703318016, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996707955086, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996709217729, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996710081359, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996719880877, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996727888831, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996734404110, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996738372853, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665711996745926355, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
+      propertyPath: m_Name
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06b52c56b8dbbcf4f986e5f237ad08c3, type: 3}
@@ -12097,3 +12433,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0522a9e5f6867e2448a1fafd631c8550, type: 3}
+--- !u!1001 &8619279186419824873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1987941796}
+    m_Modifications:
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.0700002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323912, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619279186789323956, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}
+      propertyPath: m_Name
+      value: Painted Floor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f6de32ed59374c4c9ebde757ec3a74c, type: 3}

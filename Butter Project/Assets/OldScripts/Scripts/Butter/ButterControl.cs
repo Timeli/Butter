@@ -58,7 +58,6 @@ public class ButterControl : MonoBehaviour
         }
         StepNotify?.Invoke();
         _isMove = false;
-
     }
 
     private void OnEnable()

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ButterMelt : MonoBehaviour
 {
-    [SerializeField] private Health _health;
+    [SerializeField] private Player _health;
     [SerializeField] private Material _oilMaterial;
 
     private string _clean = "clean";
