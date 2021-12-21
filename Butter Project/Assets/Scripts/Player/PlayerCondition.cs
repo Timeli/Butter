@@ -10,8 +10,8 @@ public class PlayerCondition : MonoBehaviour
 
     public event Action<int, int> HealthChanged;
 
-    private int PlayerHealth => _health;
-    private Vector3 PlayerPosition => transform.position;
+    public int Health => _health;
+    public Vector3 Position => transform.position;
 
 
     public void ChangeHealth(int amount)
