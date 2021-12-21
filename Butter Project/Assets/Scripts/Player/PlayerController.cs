@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
                 direction = Vector3.left;
             else if (route == Vector3.down)   //вниз влево
                 direction = Vector3.right;
-
             StartCoroutine(Move(_duration, direction));
         }
     }

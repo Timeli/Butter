@@ -8,7 +8,6 @@ namespace old
 {
     public class ButterMelt : MonoBehaviour
     {
-        [SerializeField] private Player _health;
         [SerializeField] private Material _oilMaterial;
 
         private string _clean = "clean";

@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(PlayerController))]
 public class GroundChecker : MonoBehaviour
 {
-    private PlayerController _playerConroller;
+    [SerializeField] private PlayerController _playerConroller;
     private float _rayLength = 1f;
 
     private readonly string _grinGround = "GreenGround";
@@ -17,17 +16,12 @@ public class GroundChecker : MonoBehaviour
     public event Action<int> GroundNotify;
 
 
-    private void Awake()
-    {
-        _playerConroller = GetComponent<PlayerController>();
-    }
-
     private void CheckGround()
     {
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, _rayLength))
         {
             int damage = DefineDamageByStep(hitInfo);
-            GroundNotify?.Invoke(damage); 
+            GroundNotify?.Invoke(damage);
         }
     }
 
@@ -61,5 +55,5 @@ public enum KindOfGround
 {
     Green = -1,
     Orange = -2,
-    Red = -3
+    Red = -3,
 }
