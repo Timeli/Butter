@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EndGameScreen _endGameScreen;
     [SerializeField] private TeleportationFrom _teleportationFrom;
 
+    private float _nextLevelZone = 10f;
     private float _deadZone = -15f;
+    private bool _isActiveTeleport;
    
     private void FixedUpdate()
     {
@@ -22,12 +24,12 @@ public class GameManager : MonoBehaviour
         {
             ManageAfterDied();
         }
-        if (_teleportationFrom.IsReached)
+        if (_teleportationFrom.IsReached && _isActiveTeleport == false)
         {
-            _teleportationFrom.MoveToNextLevel();
+            _teleportationFrom.MoveToNextLevel(_nextLevelZone);
+            _isActiveTeleport = true;
         }
     }
-
 
     private void ManageAfterDied()
     {

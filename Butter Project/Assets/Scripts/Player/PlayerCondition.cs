@@ -22,7 +22,6 @@ public class PlayerCondition : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
-        print(_currentHealth);
         if (amount < 0) 
             _currentHealth += amount;
         else if (amount > 0)

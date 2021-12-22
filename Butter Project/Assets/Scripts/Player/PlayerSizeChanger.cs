@@ -13,12 +13,20 @@ public class PlayerSizeChanger : MonoBehaviour
 
     private string _clean = "clean";
     private string _painted = "painted";
+
     private void ChangeSize(int currentHealth, int amount)
     {
         if (amount < 0)
             Melt(currentHealth); 
         else if (amount > 0)
             Grow();
+    }
+
+    private void Melt(int currentHealth)
+    {
+        _reductionSize = new Vector3(0, transform.localScale.y / (currentHealth + 1), 0);
+        transform.localScale -= _reductionSize;
+        PaintFloor();
     }
 
     private void Grow()
@@ -35,14 +43,6 @@ public class PlayerSizeChanger : MonoBehaviour
             transform.localScale = new Vector3(1, transform.localScale.y + deltaScaleY, 1);
             yield return null;
         }
-    }
-
-    private void Melt(int currentHealth)
-    {
-        _reductionSize = new Vector3(0, transform.localScale.y / (currentHealth + 1), 0);
-        transform.localScale -= _reductionSize;
-        PaintFloor();
-
     }
 
     private void PaintFloor()
