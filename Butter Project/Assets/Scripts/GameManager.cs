@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private PlayerCondition _player;
-    [SerializeField] private Transform _finish;
     [SerializeField] private EndGameScreen _endGameScreen;
+    [SerializeField] private TeleportationFrom _teleportationFrom;
+
+    private float _deadZone = -15f;
    
     private void FixedUpdate()
     {
@@ -16,14 +18,13 @@ public class GameManager : MonoBehaviour
 
     private void WatchPlayer()
     {
-        if (_player.Health <= 0)
+        if (_player.Health <= 0 || _player.Position.y <= _deadZone)
         {
             ManageAfterDied();
         }
-        if (_player.Position.x == _finish.position.x &&
-            _player.Position.z == _finish.position.z)
+        if (_teleportationFrom.IsReached)
         {
-            Debug.Log("Finish");
+            _teleportationFrom.MoveToNextLevel();
         }
     }
 
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1;
     }
 
     public void QuitGame() => Application.Quit();

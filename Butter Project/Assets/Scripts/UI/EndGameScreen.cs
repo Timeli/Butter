@@ -10,7 +10,6 @@ public class EndGameScreen : MonoBehaviour
     public void PanelAppear()
     {
         _panel.gameObject.SetActive(true);
-
     }
 
 }

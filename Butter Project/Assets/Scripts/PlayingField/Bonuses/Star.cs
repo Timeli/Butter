@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Star : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int _healthPoint = 1;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.TryGetComponent(out PlayerCondition player))
+        {
+            player.ChangeHealth(_healthPoint); 
+            gameObject.SetActive(false);
+        }
     }
 }

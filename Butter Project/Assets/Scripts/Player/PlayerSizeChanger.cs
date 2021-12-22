@@ -8,21 +8,33 @@ public class PlayerSizeChanger : MonoBehaviour
     [SerializeField] private PlayerCondition _playerCondition;
 
     private Vector3 _reductionSize;
+    private float _startHeight = 2f;
+    private int _growDuration = 60;
+
     private string _clean = "clean";
     private string _painted = "painted";
-
-
     private void ChangeSize(int currentHealth, int amount)
     {
         if (amount < 0)
-            Melt(currentHealth);
+            Melt(currentHealth); 
         else if (amount > 0)
             Grow();
     }
 
     private void Grow()
     {
-        transform.localScale = new Vector3(1, 2, 1);
+        StartCoroutine(GrowUp(_growDuration));
+    }
+
+    private IEnumerator GrowUp(int duration)
+    {
+        float deltaScaleY = (_startHeight - transform.localScale.y) / duration; 
+
+        for (int i = 0; i < duration; i++)
+        {
+            transform.localScale = new Vector3(1, transform.localScale.y + deltaScaleY, 1);
+            yield return null;
+        }
     }
 
     private void Melt(int currentHealth)
