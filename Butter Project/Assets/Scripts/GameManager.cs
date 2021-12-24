@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
             _teleportationFrom.MoveToNextLevel(_nextLevelZone);
             _isActiveTeleport = true;
         }
+        if (_player.Position.y >= _nextLevelZone)
+        {
+            NextLevelLoad();
+        }
+
     }
 
     private void ManageAfterDied()
@@ -37,10 +42,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void ReloadScene()
+    private void NextLevelLoad()
     {
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        int nextScene = scene.buildIndex + 1;
+        SceneManager.LoadScene(nextScene);
+    }
+
+    public void ReloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name); print(scene.buildIndex);
         Time.timeScale = 1;
     }
 
