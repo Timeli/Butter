@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, point,
                                                      _speed * Time.fixedDeltaTime);
-            yield return duration;
+            yield return dur;
         }
         StepNotify?.Invoke();
         _isMove = false;

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RedButton : MonoBehaviour
 {
-    [SerializeField] private BridgeController _bridgeController;
     [SerializeField] private Transform _button;
+
+    public UnityEvent OnButtonPressed;
 
     private float _pressingDepth = 0.08f;
     private bool _pressed;
@@ -14,7 +16,7 @@ public class RedButton : MonoBehaviour
     {
         if (_pressed == false)
         {
-            _bridgeController.InitialCreateBridge();
+            OnButtonPressed?.Invoke();
             Vector3 _pressedButtonPos = new Vector3(_button.position.x,
                                                     _button.position.y - _pressingDepth,
                                                     _button.position.z);
@@ -22,4 +24,6 @@ public class RedButton : MonoBehaviour
             _pressed = true;
         }
     }
+
+
 }

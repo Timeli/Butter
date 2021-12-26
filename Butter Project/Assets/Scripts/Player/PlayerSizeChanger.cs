@@ -12,23 +12,27 @@ public class PlayerSizeChanger : MonoBehaviour
     private float _startHeight = 2f;
     private int _growDuration = 60;
 
-    private void ChangeSize(int currentHealth, int amount)
+    private void Start()
+    {
+        _reductionSize = new Vector3(0, _startHeight / _playerCondition.Health, 0);
+    }
+
+    private void ChangeSize(int amount)
     {
         if (amount < 0)
-            Melt(currentHealth); 
+            Melt(amount); 
         else if (amount > 0)
             Grow();
     }
 
-    private void Melt(int currentHealth)
+    private void Melt(int amount)
     {
-        _reductionSize = new Vector3(0, transform.localScale.y / (currentHealth + 1), 0);
+        var size = new Vector3(0, _reductionSize.y * -amount, 0);
 
-        if (transform.localScale.y < _reductionSize.y)
+        if (transform.localScale.y <= size.y)
             transform.localScale = new Vector3(1, 0, 1);
         else
-            transform.localScale -= _reductionSize; 
-        
+            transform.localScale -= size;
         PaintFloor();
     }
 
@@ -62,7 +66,8 @@ public class PlayerSizeChanger : MonoBehaviour
 
     private IEnumerator Paint(float duration, Renderer ground, int numMaterial)
     {
-        yield return new WaitForSeconds(duration);
+        var dur = new WaitForSeconds(duration);
+        yield return dur;
         ground.material = _oilMaterial[numMaterial];
     }
 

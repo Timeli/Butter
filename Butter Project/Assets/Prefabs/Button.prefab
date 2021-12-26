@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 6863245805065338076}
   - component: {fileID: 6863245805065338077}
   - component: {fileID: 6863245805065338074}
-  - component: {fileID: 6863245805065338079}
+  - component: {fileID: 1868300671}
   m_Layer: 0
   m_Name: RedButton
   m_TagString: Untagged
@@ -223,7 +223,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6863245805065338079
+--- !u!114 &1868300671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,5 +235,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d823d9b0840278641ad442d7975df696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bridgeController: {fileID: 0}
   _button: {fileID: 6863245805065338075}
+  OnButtonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BridgeController, Assembly-CSharp
+        m_MethodName: InitialCreateBridge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -8,14 +8,14 @@ public class PlayerCondition : MonoBehaviour
     [SerializeField][Range(15, 35)] private int _startHealth;
     [SerializeField] private GroundChecker _groundChecker;
 
-    public event Action<int, int> HealthChanged;
+    public event Action<int> HealthChanged;
     private int _currentHealth;
 
     public int Health => _currentHealth;
     public Vector3 Position => transform.position;
 
 
-    private void Start()
+    private void Awake()
     {
         _currentHealth = _startHealth + 1;
     }
@@ -28,7 +28,7 @@ public class PlayerCondition : MonoBehaviour
         else if (amount > 0)
             _currentHealth = _startHealth + 1;
 
-        HealthChanged?.Invoke(_currentHealth, amount);
+        HealthChanged?.Invoke(amount);
     }
 
     private void OnEnable()
