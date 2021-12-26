@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeleportationFrom : MonoBehaviour
+public class MovingFrom : MonoBehaviour
 {
     private bool _isReached;
     private float _durationBeforeStart = 0.5f;

@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,32 +25,38 @@ public class PlayerController : MonoBehaviour
         MoveButter(pointer);
     }
 
-    private void MoveButter(Vector3 route)
+    private void MoveButter(Vector3 pointer)
     {
-        if (_isMove == false && route != Vector3.zero)
+        if (_isMove == false && pointer != Vector3.zero)
         {
             _isMove = true;
             Vector3 direction = Vector3.zero;
 
-            if (route == Vector3.left)        //ââåðõ âëåâî
+            if (pointer == Vector3.left)        //A (ðŸ¡¬)
                 direction = Vector3.back;
-            else if (route == Vector3.right)  //âíèç âïðàâî
+            else if (pointer == Vector3.right)  //S (ðŸ¡¯)
                 direction = Vector3.forward;
-            else if (route == Vector3.up)     //ââåðõ âïðàâî
+            else if (pointer == Vector3.up)     //W (ðŸ¡­)
                 direction = Vector3.left;
-            else if (route == Vector3.down)   //âíèç âëåâî
+            else if (pointer == Vector3.down)   //D (ðŸ¡®)
                 direction = Vector3.right;
+
             StartCoroutine(Move(_duration, direction));
         }
     }
 
-    private IEnumerator Move(float dur, Vector3 direction)
+    private IEnumerator Move(float duration, Vector3 direction)
     {
         Vector3 point = transform.position + direction;
-        var duration = new WaitForSeconds(dur);
+        var dur = new WaitForSeconds(duration);
 
         while (transform.position != point)
-        {
+        { 
+            //if the step is larger than the standard block(1f),
+            //it means the teleport used
+            if ((transform.position - point).magnitude > 1.1f)
+                break;
+
             transform.position = Vector3.MoveTowards(transform.position, point,
                                                      _speed * Time.fixedDeltaTime);
             yield return duration;

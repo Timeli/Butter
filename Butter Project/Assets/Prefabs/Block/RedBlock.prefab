@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1769863643036928733}
   m_Layer: 0
   m_Name: RedBlock
-  m_TagString: Untagged
+  m_TagString: clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -142,6 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerConroller: {fileID: 8097498491296040904}
+  _materials:
+  - {fileID: 2100000, guid: 19a71463979b3e342b39a1b529106739, type: 2}
+  - {fileID: 2100000, guid: 9bc826353e166ce4eaedd70ea251c5e7, type: 2}
+  - {fileID: 2100000, guid: d990a10a43d6b824abdafaa3c24d9c00, type: 2}
 --- !u!114 &8097498491296040901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41800eb31533b4841bd725d83eb23a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startHealth: 20
+  _startHealth: 31
   _groundChecker: {fileID: 8097498491296040900}
 --- !u!114 &8097498491296040903
 MonoBehaviour:
@@ -168,5 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978cbba7c02acba46a3c451d106ca421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _oilMaterial: {fileID: 2100000, guid: c97161fe2830a7e4fafaff7b75a3d138, type: 2}
   _playerCondition: {fileID: 8097498491296040901}
+  _material:
+  - {fileID: 2100000, guid: 19a71463979b3e342b39a1b529106739, type: 2}
+  - {fileID: 2100000, guid: 9bc826353e166ce4eaedd70ea251c5e7, type: 2}
+  - {fileID: 2100000, guid: d990a10a43d6b824abdafaa3c24d9c00, type: 2}
+  _oilMaterial:
+  - {fileID: 2100000, guid: c97161fe2830a7e4fafaff7b75a3d138, type: 2}
+  - {fileID: 2100000, guid: cfa508afe58c8d24c8eb3d68e18eae74, type: 2}
+  - {fileID: 2100000, guid: 5165c9a1cf54a7a4c831355a668426d1, type: 2}

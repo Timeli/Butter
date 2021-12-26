@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PlayerSizeChanger : MonoBehaviour
 {
-    [SerializeField] private Material _oilMaterial;
     [SerializeField] private PlayerCondition _playerCondition;
+    [SerializeField] private Material[] _material;
+    [SerializeField] private Material[] _oilMaterial;
 
     private Vector3 _reductionSize;
     private float _startHeight = 2f;
     private int _growDuration = 60;
-
-    private string _clean = "clean";
-    private string _painted = "painted";
 
     private void ChangeSize(int currentHealth, int amount)
     {
@@ -25,7 +23,12 @@ public class PlayerSizeChanger : MonoBehaviour
     private void Melt(int currentHealth)
     {
         _reductionSize = new Vector3(0, transform.localScale.y / (currentHealth + 1), 0);
-        transform.localScale -= _reductionSize;
+
+        if (transform.localScale.y < _reductionSize.y)
+            transform.localScale = new Vector3(1, 0, 1);
+        else
+            transform.localScale -= _reductionSize; 
+        
         PaintFloor();
     }
 
@@ -49,19 +52,18 @@ public class PlayerSizeChanger : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1))
         {
-            if (hitInfo.collider.tag == _clean)
-            {
-                Renderer ground = hitInfo.collider.GetComponent<Renderer>();
-                StartCoroutine(Paint(0.1f, ground));
-            }
+            Renderer ground = hitInfo.collider.GetComponent<Renderer>();
+            
+            for (int i = 0; i < _material.Length; i++)
+                if (_material[i].color == ground.material.color)
+                    StartCoroutine(Paint(0.1f, ground, i));
         }
     }
 
-    private IEnumerator Paint(float duration, Renderer ground)
+    private IEnumerator Paint(float duration, Renderer ground, int numMaterial)
     {
         yield return new WaitForSeconds(duration);
-        ground.material = _oilMaterial;
-        ground.tag = _painted;
+        ground.material = _oilMaterial[numMaterial];
     }
 
     private void OnEnable()

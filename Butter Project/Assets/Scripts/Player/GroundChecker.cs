@@ -4,17 +4,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class GroundChecker : MonoBehaviour
 {
     [SerializeField] private PlayerController _playerConroller;
+    
+    [SerializeField] private Material _greenGround;
+    [SerializeField] private Material _oilGreenGround;
+    [SerializeField] private Material _orangeGround;
+    [SerializeField] private Material _oilOrangeGround;
+    [SerializeField] private Material _redGround;
+    [SerializeField] private Material _oilRedGround;
+    
     private float _rayLength = 1f;
-
-    private readonly string _grinGround = "GreenGround";
-    private readonly string _orangeGround = "OrangeGround";
-    private readonly string _redGround = "RedGround";
+    private GroundList _grounds;
 
     public event Action<int> GroundNotify;
 
+    private void Start()
+    {
+        _grounds = new GroundList();
+        _grounds.AddGround(new Ground(_greenGround, -1));
+        _grounds.AddGround(new Ground(_oilGreenGround, -1));
+        _grounds.AddGround(new Ground(_orangeGround, -2));
+        _grounds.AddGround(new Ground(_oilOrangeGround, -2));
+        _grounds.AddGround(new Ground(_redGround, -3));
+        _grounds.AddGround(new Ground(_oilRedGround, -3));
+    }
 
     private void CheckGround()
     {
@@ -27,16 +43,8 @@ public class GroundChecker : MonoBehaviour
 
     private int DefineDamageByStep(RaycastHit hit)
     {
-        int damage = 0;
-        string groundName = hit.collider.name;
-
-        if (groundName == _grinGround)
-            damage = (int)KindOfGround.Green;
-        else if (groundName == _orangeGround)
-            damage = (int)KindOfGround.Orange;
-        else if (groundName == _redGround)
-            damage = (int)KindOfGround.Red;
-
+        Renderer ground = hit.collider.GetComponent<Renderer>();
+        int damage = _grounds.GetGroundDamage(ground.material);
         return damage;
     }
 
@@ -51,9 +59,3 @@ public class GroundChecker : MonoBehaviour
     }
 }
 
-public enum KindOfGround
-{
-    Green = -1,
-    Orange = -2,
-    Red = -3,
-}

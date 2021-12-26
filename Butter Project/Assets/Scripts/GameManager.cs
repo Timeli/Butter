@@ -7,12 +7,12 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private PlayerCondition _player;
     [SerializeField] private EndGameScreen _endGameScreen;
-    [SerializeField] private TeleportationFrom _teleportationFrom;
+    [SerializeField] private MovingFrom _movingFrom;
 
     private float _nextLevelZone = 10f;
     private float _deadZone = -15f;
     private bool _isActiveTeleport;
-   
+
     private void FixedUpdate()
     {
         WatchPlayer();
@@ -24,9 +24,9 @@ public class GameManager : MonoBehaviour
         {
             ManageAfterDied();
         }
-        if (_teleportationFrom.IsReached && _isActiveTeleport == false)
+        if (_movingFrom.IsReached && _isActiveTeleport == false)
         {
-            _teleportationFrom.MoveToNextLevel(_nextLevelZone);
+            _movingFrom.MoveToNextLevel(_nextLevelZone);
             _isActiveTeleport = true;
         }
         if (_player.Position.y >= _nextLevelZone)
