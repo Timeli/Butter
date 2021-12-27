@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         var dur = new WaitForSeconds(duration);
 
         while (transform.position != point)
-        { 
+        {
             //if the step is larger than the standard block(1f),
             //it means the teleport used
             if ((transform.position - point).magnitude > 1.1f)

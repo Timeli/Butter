@@ -45,7 +45,7 @@ public class GroundChecker : MonoBehaviour
         }
         else
         {
-            _playerConroller.enabled = false;
+            //_playerConroller.enabled = false;
         }
     }
 
