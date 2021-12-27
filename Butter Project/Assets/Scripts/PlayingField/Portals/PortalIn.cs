@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PortalIn : MonoBehaviour
 {
-    [SerializeField] private Transform _teleporterIn;
     [SerializeField] private Transform _teleporterOutPoint;
+    private Vector3 _offset;
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.position = _teleporterOutPoint.position;
+        _offset = new Vector3(0, other.transform.localScale.y / 2, 0);
+        other.transform.position = _teleporterOutPoint.position + _offset;
     }
 }

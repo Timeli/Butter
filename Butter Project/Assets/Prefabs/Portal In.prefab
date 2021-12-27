@@ -139,5 +139,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0ea2a5bd373c148a64b51aec9ea9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _teleporterIn: {fileID: 8766339114908371016}
   _teleporterOutPoint: {fileID: 0}

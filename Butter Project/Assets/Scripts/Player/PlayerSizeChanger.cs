@@ -10,7 +10,7 @@ public class PlayerSizeChanger : MonoBehaviour
 
     private Vector3 _reductionSize;
     private float _startHeight = 2f;
-    private int _growDuration = 60;
+    private int _growDuration = 30;
 
     private void Start()
     {
@@ -20,20 +20,29 @@ public class PlayerSizeChanger : MonoBehaviour
     private void ChangeSize(int amount)
     {
         if (amount < 0)
-            Melt(amount); 
+            InitialMelt(amount); 
         else if (amount > 0)
             Grow();
     }
 
-    private void Melt(int amount)
+    private void InitialMelt(int amount)
     {
-        var size = new Vector3(0, _reductionSize.y * -amount, 0);
-
-        if (transform.localScale.y <= size.y)
-            transform.localScale = new Vector3(1, 0, 1);
-        else
-            transform.localScale -= size;
+        StartCoroutine(Melt(amount));
         PaintFloor();
+    }
+
+    private IEnumerator Melt(int amount)
+    {
+        var size = new Vector3(0, _reductionSize.y * -amount, 0) / 30;
+        for (int i = 0; i < 30; i++)
+        {
+            if (_playerCondition.Health <= 0)
+                transform.localScale = new Vector3(1, 0, 1);
+            else
+                transform.localScale -= size;
+            yield return null;
+        }
+       
     }
 
     private void Grow()

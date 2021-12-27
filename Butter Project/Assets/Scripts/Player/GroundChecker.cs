@@ -15,6 +15,10 @@ public class GroundChecker : MonoBehaviour
     [SerializeField] private Material _oilOrangeGround;
     [SerializeField] private Material _redGround;
     [SerializeField] private Material _oilRedGround;
+
+    private int _greenDamage = -1;
+    private int _orangeDamage = -2;
+    private int _redDamage = -3;
     
     private float _rayLength = 1f;
     private GroundList _grounds;
@@ -24,12 +28,12 @@ public class GroundChecker : MonoBehaviour
     private void Start()
     {
         _grounds = new GroundList();
-        _grounds.AddGround(new Ground(_greenGround, -1));
-        _grounds.AddGround(new Ground(_oilGreenGround, -1));
-        _grounds.AddGround(new Ground(_orangeGround, -2));
-        _grounds.AddGround(new Ground(_oilOrangeGround, -2));
-        _grounds.AddGround(new Ground(_redGround, -3));
-        _grounds.AddGround(new Ground(_oilRedGround, -3));
+        _grounds.AddGround(new Ground(_greenGround, _greenDamage));
+        _grounds.AddGround(new Ground(_oilGreenGround, _greenDamage));
+        _grounds.AddGround(new Ground(_orangeGround, _orangeDamage));
+        _grounds.AddGround(new Ground(_oilOrangeGround, _orangeDamage));
+        _grounds.AddGround(new Ground(_redGround, _redDamage));
+        _grounds.AddGround(new Ground(_oilRedGround, _redDamage));
     }
 
     private void CheckGround()
@@ -38,6 +42,10 @@ public class GroundChecker : MonoBehaviour
         {
             int damage = DefineDamageByStep(hitInfo);
             GroundNotify?.Invoke(damage);
+        }
+        else
+        {
+            _playerConroller.enabled = false;
         }
     }
 

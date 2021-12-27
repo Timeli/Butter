@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerCondition _player;
     [SerializeField] private EndGameScreen _endGameScreen;
     [SerializeField] private MovingFrom _movingFrom;
+    [SerializeField] private Screen _screen;
 
     private float _nextLevelZone = 10f;
     private float _deadZone = -15f;
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
         {
             _movingFrom.MoveToNextLevel(_nextLevelZone);
             _isActiveTeleport = true;
+            _screen.InitialDimmingScreen();
+
         }
         if (_player.Position.y >= _nextLevelZone)
         {
@@ -52,7 +55,7 @@ public class GameManager : MonoBehaviour
     public void ReloadScene()
     {
         Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name); print(scene.buildIndex);
+        SceneManager.LoadScene(scene.name);
         Time.timeScale = 1;
     }
 
