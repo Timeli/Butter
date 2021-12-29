@@ -2285,7 +2285,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 201504276855073926, guid: 205e806e53a738e46b6a08cd16ab6044, type: 3}
       propertyPath: m_Name
-      value: PlatformFrom
+      value: LiftFrom
       objectReference: {fileID: 0}
     - target: {fileID: 201504276855073946, guid: 205e806e53a738e46b6a08cd16ab6044, type: 3}
       propertyPath: m_RootOrder
@@ -3437,7 +3437,7 @@ GameObject:
   - component: {fileID: 201504275724051188}
   - component: {fileID: 201504275724051180}
   m_Layer: 0
-  m_Name: PlatformInto
+  m_Name: LiftInto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
