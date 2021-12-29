@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8097498491296040900}
   - component: {fileID: 8097498491296040901}
   - component: {fileID: 8097498491296040903}
+  - component: {fileID: 1614346444}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d54dc63c421da44805443d098480d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
+  _speed: 3.7
 --- !u!114 &8097498491296040900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +149,7 @@ MonoBehaviour:
   _oilOrangeGround: {fileID: 2100000, guid: cfa508afe58c8d24c8eb3d68e18eae74, type: 2}
   _redGround: {fileID: 2100000, guid: d990a10a43d6b824abdafaa3c24d9c00, type: 2}
   _oilRedGround: {fileID: 2100000, guid: 5165c9a1cf54a7a4c831355a668426d1, type: 2}
+  _glassMaterial: {fileID: 2100000, guid: 75f9a3f7269a1b74e9954e06c5cebcf6, type: 2}
 --- !u!114 &8097498491296040901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41800eb31533b4841bd725d83eb23a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startHealth: 30
+  _startHealth: 29
   _groundChecker: {fileID: 8097498491296040900}
 --- !u!114 &8097498491296040903
 MonoBehaviour:
@@ -175,11 +177,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerCondition: {fileID: 8097498491296040901}
-  _material:
-  - {fileID: 2100000, guid: 19a71463979b3e342b39a1b529106739, type: 2}
-  - {fileID: 2100000, guid: 9bc826353e166ce4eaedd70ea251c5e7, type: 2}
-  - {fileID: 2100000, guid: d990a10a43d6b824abdafaa3c24d9c00, type: 2}
-  _oilMaterial:
-  - {fileID: 2100000, guid: c97161fe2830a7e4fafaff7b75a3d138, type: 2}
-  - {fileID: 2100000, guid: cfa508afe58c8d24c8eb3d68e18eae74, type: 2}
-  - {fileID: 2100000, guid: 5165c9a1cf54a7a4c831355a668426d1, type: 2}
+--- !u!114 &1614346444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097498491296040909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154a2587fa2e7ef4c9b1991d1973a889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _checker: {fileID: 8097498491296040900}
+  _material: []
+  _oilMaterial: []

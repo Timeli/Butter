@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerSizeChanger : MonoBehaviour
 {
     [SerializeField] private PlayerCondition _playerCondition;
-    [SerializeField] private Material[] _material;
-    [SerializeField] private Material[] _oilMaterial;
 
     private Vector3 _reductionSize;
     private float _startHeight = 2f;
@@ -19,18 +17,15 @@ public class PlayerSizeChanger : MonoBehaviour
 
     private void ChangeSize(int amount)
     {
-        if (amount < 0)
+        if (amount <= 0)
             InitialMelt(amount); 
         else if (amount > 0)
             Grow();
     }
 
-    private void InitialMelt(int amount)
-    {
-        StartCoroutine(Melt(amount));
-        PaintFloor();
-    }
-
+    private void InitialMelt(int amount) => StartCoroutine(Melt(amount));
+    private void Grow() => StartCoroutine(GrowUp(_growDuration));
+        
     private IEnumerator Melt(int amount)
     {
         var size = new Vector3(0, _reductionSize.y * -amount, 0) / 30;
@@ -42,12 +37,6 @@ public class PlayerSizeChanger : MonoBehaviour
                 transform.localScale -= size;
             yield return null;
         }
-       
-    }
-
-    private void Grow()
-    {
-        StartCoroutine(GrowUp(_growDuration));
     }
 
     private IEnumerator GrowUp(int duration)
@@ -61,24 +50,6 @@ public class PlayerSizeChanger : MonoBehaviour
         }
     }
 
-    private void PaintFloor()
-    {
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1))
-        {
-            Renderer ground = hitInfo.collider.GetComponent<Renderer>();
-            
-            for (int i = 0; i < _material.Length; i++)
-                if (_material[i].color == ground.material.color)
-                    StartCoroutine(Paint(0.1f, ground, i));
-        }
-    }
-
-    private IEnumerator Paint(float duration, Renderer ground, int numMaterial)
-    {
-        var dur = new WaitForSeconds(duration);
-        yield return dur;
-        ground.material = _oilMaterial[numMaterial];
-    }
 
     private void OnEnable()
     {

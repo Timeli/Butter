@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class GroundChecker : MonoBehaviour
 {
     [SerializeField] private PlayerController _playerConroller;
@@ -15,15 +14,17 @@ public class GroundChecker : MonoBehaviour
     [SerializeField] private Material _oilOrangeGround;
     [SerializeField] private Material _redGround;
     [SerializeField] private Material _oilRedGround;
+    [SerializeField] private Material _glassMaterial;
 
+    private int _glassDamage = 0;
     private int _greenDamage = -1;
     private int _orangeDamage = -2;
     private int _redDamage = -3;
     
     private float _rayLength = 1f;
     private GroundList _grounds;
-
     public event Action<int> GroundNotify;
+    public event Action<Renderer> KindOfGround;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class GroundChecker : MonoBehaviour
         _grounds.AddGround(new Ground(_oilOrangeGround, _orangeDamage));
         _grounds.AddGround(new Ground(_redGround, _redDamage));
         _grounds.AddGround(new Ground(_oilRedGround, _redDamage));
+        _grounds.AddGround(new Ground(_glassMaterial, _glassDamage));
     }
 
     private void CheckGround()
@@ -43,15 +45,12 @@ public class GroundChecker : MonoBehaviour
             int damage = DefineDamageByStep(hitInfo);
             GroundNotify?.Invoke(damage);
         }
-        else
-        {
-            //_playerConroller.enabled = false;
-        }
     }
 
     private int DefineDamageByStep(RaycastHit hit)
     {
         Renderer ground = hit.collider.GetComponent<Renderer>();
+        KindOfGround?.Invoke(ground);
         int damage = _grounds.GetGroundDamage(ground.material);
         return damage;
     }
