@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private PlayerCondition _player;
-    [SerializeField] private EndGameScreen _endGameScreen;
+    [SerializeField] private ScreenEffects _screenEffects;
     [SerializeField] private MovingFrom _movingFrom;
-    [SerializeField] private Screen _screen;
+    [SerializeField] private ExitAndRepeatPanel _exitAndRepeatPanel;
+    [SerializeField] private FinishGameScreen _finishGameScreen;
 
     private float _nextLevelZone = 10f;
     private float _deadZone = -15f;
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
         {
             _movingFrom.MoveToNextLevel(_nextLevelZone);
             _isActiveTeleport = true;
-            _screen.InitialDimmingScreen();
+            _screenEffects.InitialDimmingScreen();
 
         }
         if (_player.Position.y >= _nextLevelZone)
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void ManageAfterDied()
     {
-        _endGameScreen.PanelAppear();
+        _exitAndRepeatPanel.PanelAppear();
         Time.timeScale = 0;
     }
 
@@ -62,8 +63,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("End");
-            //FinallyPanel.Show();
+            _finishGameScreen.PanelAppear();
         }
             
     }

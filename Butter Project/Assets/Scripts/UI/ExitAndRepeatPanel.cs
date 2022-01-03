@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EndGameScreen : MonoBehaviour
+public class ExitAndRepeatPanel : MonoBehaviour
 {
     [SerializeField] private Transform _panel;
 
@@ -11,5 +11,4 @@ public class EndGameScreen : MonoBehaviour
     {
         _panel.gameObject.SetActive(true);
     }
-
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class Screen : MonoBehaviour
+public class ScreenEffects : MonoBehaviour
 {
     [SerializeField] private PostProcessVolume _postProcess;
 
