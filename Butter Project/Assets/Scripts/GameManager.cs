@@ -9,18 +9,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ScreenEffects _screenEffects;
     [SerializeField] private MovingFrom _movingFrom;
     [SerializeField] private ExitAndRepeatPanel _exitAndRepeatPanel;
-    [SerializeField] private FinishGameScreen _finishGameScreen;
 
     private float _nextLevelZone = 10f;
     private float _deadZone = -15f;
     private bool _isActiveTeleport;
 
-    private int _countScene; 
-
-    private void Start()
-    {
-        _countScene = SceneManager.sceneCountInBuildSettings;
-    }
 
     private void FixedUpdate()
     {
@@ -56,16 +49,8 @@ public class GameManager : MonoBehaviour
     private void NextLevelLoad()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (_countScene - 1 > scene.buildIndex)
-        {
-            int nextScene = scene.buildIndex + 1;
-            SceneManager.LoadScene(nextScene);
-        }
-        else
-        {
-            _finishGameScreen.PanelAppear();
-        }
-            
+        int nextScene = scene.buildIndex + 1;
+        SceneManager.LoadScene(nextScene);
     }
 
     public void ReloadScene()
