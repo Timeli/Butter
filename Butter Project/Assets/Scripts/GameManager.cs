@@ -14,6 +14,13 @@ public class GameManager : MonoBehaviour
     private float _deadZone = -15f;
     private bool _isActiveTeleport;
 
+    private int _countScene; 
+
+    private void Start()
+    {
+        _countScene = SceneManager.sceneCountInBuildSettings;
+    }
+
     private void FixedUpdate()
     {
         WatchPlayer();
@@ -48,8 +55,17 @@ public class GameManager : MonoBehaviour
     private void NextLevelLoad()
     {
         Scene scene = SceneManager.GetActiveScene();
-        int nextScene = scene.buildIndex + 1;
-        SceneManager.LoadScene(nextScene);
+        if (_countScene - 1 > scene.buildIndex)
+        {
+            int nextScene = scene.buildIndex + 1;
+            SceneManager.LoadScene(nextScene);
+        }
+        else
+        {
+            Debug.Log("End");
+            //FinallyPanel.Show();
+        }
+            
     }
 
     public void ReloadScene()

@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
         MoveButter(pointer);
     }
 
+    public void Disable() => this.enabled = false;
+
     private void MoveButter(Vector3 pointer)
     {
         if (_isMove == false && pointer != Vector3.zero)

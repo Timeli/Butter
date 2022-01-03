@@ -45,6 +45,10 @@ public class GroundChecker : MonoBehaviour
             int damage = DefineDamageByStep(hitInfo);
             GroundNotify?.Invoke(damage);
         }
+        else
+        {  // if ground doesn't exist
+            _playerConroller.Disable();
+        }
     }
 
     private int DefineDamageByStep(RaycastHit hit)
