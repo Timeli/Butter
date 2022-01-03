@@ -18,7 +18,7 @@ public class MenuManager : MonoBehaviour
 
     public IEnumerator SceneLoad()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Scene scene = SceneManager.GetActiveScene();
         int nextScene = scene.buildIndex + 1;
         SceneManager.LoadScene(nextScene);

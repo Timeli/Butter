@@ -6,21 +6,35 @@ public class PlayerAppearence : MonoBehaviour
 {
     [SerializeField] private Transform _playerTransform;
 
-    private float _divider = 50;
+    private int _divisor = 60;
+    private float _sizeX = 1f;
+    private float _sizeY = 2f;
+    private float _sizeZ = 1f;
+
+    private void Start()
+    {
+        _playerTransform.gameObject.SetActive(false);
+    }
 
     public void InitializePlayer()
     {
+        _playerTransform.gameObject.SetActive(true);
         StartCoroutine(PlayerChangeSize());
     }
 
     private IEnumerator PlayerChangeSize()
     {
-        for (int i = 0; i < _divider; i++)
+        float deltaX = _sizeX / _divisor;
+        float deltaY = _sizeY / _divisor;
+        float deltaZ = _sizeZ / _divisor;
+
+        while (_playerTransform.localScale.x < _sizeX)
         {
             _playerTransform.localScale = new Vector3(
-             _playerTransform.localScale.x + 0.02f,
-             _playerTransform.localScale.y + 0.04f,
-             _playerTransform.localScale.z + 0.02f);
+            _playerTransform.localScale.x + deltaX,
+            _playerTransform.localScale.y + deltaY,
+            _playerTransform.localScale.z + deltaZ);
+
             yield return null;
         }
     }
